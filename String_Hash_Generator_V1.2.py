@@ -1,6 +1,7 @@
 import hashlib
 print('          String Hash generator          ')
 from data import string
+import time
 
 a = '1'
 b = '2'
@@ -21,6 +22,7 @@ print('|7 = Blake2b mode |')
 print('|8 = Blake2s mode |')
 print('-------------------')
 m = input('What mode do you want?\n')
+print('')
 
 
 if m == a:
@@ -39,10 +41,24 @@ elif m == g:
     h = hashlib.blake2b()
 elif m == h:
     h = hashlib.blake2s()
-
+x = 'y'
+y = 'n'
 
 h.update(string.encode('utf-8'))
-print(h.hexdigest())
-print("Nothing to do here, Quitting...")
-input()
+s = input('Want to save it to a file?\n')
+if s == x:
+    print('Saving...')
+    time.sleep(3)
+    f = open("Str_to_hash.txt", "x")
+    f = open("Str_to_hash.txt", "w")
+    f.write("This is the hash that was created... ")
+    f.write(h.hexdigest())
+    f.close()
 
+elif s == y:
+    print('This is the hash that you were looking for...')
+    print(h.hexdigest())
+       
+print('')
+print("Nothing more to do here, Quitting...")
+time.sleep(5)
