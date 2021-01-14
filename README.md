@@ -5,9 +5,14 @@ This script has the hability to generate hashes out of strings of alfanumeric te
 EXECUTE THE SCRIPT:
 
 
-python String_Hash_Generator_V1.4.py
+python String_Hash_Generator_V1.5.py
 
 or
 
-python3 String_Hash_Generator_V1.4.py
+python3 String_Hash_Generator_V1.5.py
+
+EXECUTING THE FILE
+
+The generator is now available thanks to auto-py-to-exe, just download the file and execute it!
+
 
